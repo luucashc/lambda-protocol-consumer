@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Worker responsável por ouvir um evento Kafka, validar o schema avro e criar um protocolo em uma API interna.
+Example project for a lambda function using Clear Architecture and good programming practices. In this example, the lambda will be responsible for listening to a Kafka event, validating the Avro schema and creating a protocol internally.
 
 ## Documentações
 

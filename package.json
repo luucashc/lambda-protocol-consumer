@@ -1,7 +1,7 @@
 {
   "name": "worker-create-protocol-consumer",
   "version": "1.0.0",
-  "description": "Worker responsável por ouvir um evento Kafka, validar o schema avro e criar um protocolo em uma API interna.",
+  "description": "--",
   "main": "src/lambda/createProtocol.ts",
   "scripts": {
     "test": "node test"
