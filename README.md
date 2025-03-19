@@ -6,9 +6,7 @@ Example project for a lambda function using Clear Architecture and good programm
 
 ## Documentações
 
-[ Clear Architecture ]()
-
-[ Clear Code ]()
+[ Clear Architecture ]
 
 ## Monitoramento
 
@@ -23,7 +21,7 @@ Example project for a lambda function using Clear Architecture and good programm
 ## Instalação do Projeto
 
 ```sh
-git clone worker-create-protocol-consumer
+git clone https://github.com/luucashc/worker-create-protocol-consumer.git
 ```
 
 ```sh
