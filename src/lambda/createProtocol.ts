@@ -5,8 +5,8 @@ const logger = require("../framework/common/logger");
 
 export async function handler(params: Event): Promise<LambdaResponse> {
   try {
-    logger.DEBUG("New ticket received", {
-      global_event_name: "TICKET_RECEIVED",
+    logger.DEBUG("New protocol received", {
+      global_event_name: "PROTOCOL_RECEIVED",
       context: {
         service: "handler",
         params: params,
