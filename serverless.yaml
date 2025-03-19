@@ -1,0 +1,18 @@
+service: worker-create-protocol-consumer
+frameworkVersion: '3'
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+plugins:
+  - serverless-plugin-typescript
+
+functions:
+  app:
+    handler: src/lambda/createProtocol.handler
+    environment:
+      APPLICATION_NAME: worker-create-protocol-consumer
+      LOGGER_DEBUG: false

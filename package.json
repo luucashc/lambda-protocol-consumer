@@ -1,0 +1,25 @@
+{
+  "name": "worker-create-protocol-consumer",
+  "version": "1.0.0",
+  "description": "Worker responsável por ouvir um evento Kafka, validar o schema avro e criar um protocolo em uma API interna.",
+  "main": "src/lambda/createProtocol.ts",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "--"
+  },
+  "author": "Lucas Cardoso <lucashgcardoso1@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "3.39",
+    "serverless-plugin-typescript": "^2.1.5",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "avsc": "^5.7.7",
+    "axios": "^1.8.1",
+    "winston": "^3.17.0"
+  }
+}
