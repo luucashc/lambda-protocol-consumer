@@ -19,9 +19,6 @@ export class CreateProtocolUseCase {
         avroMessage: params,
       });
       */
-
-      /** call Protocol API */
-
     } catch (error) {
       throw error;
     }

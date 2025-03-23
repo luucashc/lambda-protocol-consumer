@@ -1,5 +1,5 @@
 {
-  "name": "worker-create-protocol-consumer",
+  "name": "lambda-protocol-consumer",
   "version": "1.0.0",
   "description": "--",
   "main": "src/lambda/createProtocol.ts",

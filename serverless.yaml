@@ -14,5 +14,5 @@ functions:
   app:
     handler: src/lambda/createProtocol.handler
     environment:
-      APPLICATION_NAME: worker-create-protocol-consumer
+      APPLICATION_NAME: lambda-protocol-consumer
       LOGGER_DEBUG: false

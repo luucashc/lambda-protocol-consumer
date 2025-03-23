@@ -1,4 +1,4 @@
-# worker-create-protocol-consumer
+# lambda-protocol-consumer
 
 ## Descrição do Projeto
 
