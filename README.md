@@ -1,12 +1,52 @@
 # lambda-protocol-consumer
 
-## Descrição do Projeto
+## Contexto de negócio
 
 Example project for a lambda function using Clear Architecture and good programming practices. In this example, the lambda will be responsible for listening to a Kafka event, validating the Avro schema and creating a protocol internally.
 
+## Funcionalidades
+- Consumir evento Kafka com payload serializado em Avro
+- Decodificar o evento usando Schema Registry
+- Executar o caso de uso de criação de protocolo
+
 ## Documentações
 
-[ Clear Architecture ]
+[ Architecture ]
+
+## Arquitetura
+
+Este projeto segue os princípios da Clean Architecture, separando claramente responsabilidades em diferentes camadas. Isso facilita a escalabilidade, testabilidade e manutenibilidade do sistema.
+
+### Estrutura de pastas:
+
+- **Application (`application`)**: onde ficam os casos de uso (regras de negócio orquestradas).
+- **Core (`core`)**: O core é a camada mais interna do projeto sendo responsável pelas entidades ou os objetos do domínio de negócio, ela é independente de outras camadas.
+  - **interfaces**: contratos (interfaces) que os adapters devem seguir.
+  - **types**: tipos reutilizáveis entre as camadas.
+- **Framework (`framework`)**: Camada responsável por todas as dependências externas do projeto, todas as regras externas estão isoladas no próprio adapter, e deve ser utilizada sempre pelo orquestrador(usecase).
+  - **adapters**: implementações concretas dos contratos definidos na camada `core`, como Kafka, Schema Registry e HTTP.
+  - **common**: constantes e logger reutilizáveis no projeto.
+- **Handlers (`handlers`)**: entrada do Lambda, ponto de entrada da AWS Lambda que consome os eventos e aciona os casos de uso.
+
+---
+
+```bash
+src/
+├── application/
+│   └── use-cases/                # Casos de uso da aplicação
+│       └── closeTicket.useCase.ts
+├── config/                       # Configuração e injeção de dependências
+│   ├── config.ts
+│   └── container.ts
+├── core/
+│   ├── interfaces/               # Contratos dos adapters (portas)
+│   ├── types/                    # Tipos reutilizáveis
+├── framework/
+│   ├── adapters/                 # Adapters (implementações concretas)
+│   ├── common/                   # Utilitários como logger e constantes
+├── handlers/                 # Entradas dos Lambdas
+├── tests/unit/                   # Testes unitários
+```
 
 ## Monitoramento
 
